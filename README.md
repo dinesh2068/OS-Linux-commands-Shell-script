@@ -43,23 +43,25 @@ s.n. dasgupta
 cat < file1
 ## OUTPUT
 
-
+![alt text](image.png)
 
 cat < file2
 ## OUTPUT
+![alt text](image-1.png)
 
 
 # Comparing Files
 cmp file1 file2
 ## OUTPUT
- 
+![alt text](image-2.png)
+
 comm file1 file2
  ## OUTPUT
-
+![alt text](image-3.png)
  
 diff file1 file2
 ## OUTPUT
-
+![alt text](image-4.png)
 
 #Filters
 
@@ -82,65 +84,53 @@ cat > file22
 
 cut -c1-3 file11
 ## OUTPUT
-
-
-
+![alt text](image-5.png)
 
 cut -d "|" -f 1 file22
 ## OUTPUT
-
-
+![alt text](image-6.png)
 
 cut -d "|" -f 2 file22
 ## OUTPUT
-
+![alt text](image-7.png)
 
 cat < newfile 
 ```
 Hello world
 hello world
 ^d
-````
+```
 cat > newfile 
 Hello world
 hello world
  
 grep Hello newfile 
 ## OUTPUT
-
-
+![alt text](image-8.png)
 
 grep hello newfile 
 ## OUTPUT
-
-
-
+![alt text](image-9.png)
 
 grep -v hello newfile 
 ## OUTPUT
-
-
+![alt text](image-10.png)
 
 cat newfile | grep -i "hello"
 ## OUTPUT
-
-
-
+![alt text](image-11.png)
 
 cat newfile | grep -i -c "hello"
 ## OUTPUT
-
-
-
+![alt text](image-12.png)
 
 grep -R ubuntu /etc
 ## OUTPUT
-
-
+![alt text](image-13.png)
 
 grep -w -n world newfile   
 ## OUTPUT
-
+![alt text](image-14.png)
 
 cat < newfile 
 ```
@@ -163,60 +153,51 @@ Linux is best in this World
  ```
 egrep -w 'Hello|hello' newfile 
 ## OUTPUT
-
-
+![alt text](image-15.png)
 
 egrep -w '(H|h)ello' newfile 
 ## OUTPUT
-
-
+![alt text](image-16.png)
 
 egrep -w '(H|h)ell[a-z]' newfile 
 ## OUTPUT
-
-
-
+![alt text](image-17.png)
 
 egrep '(^hello)' newfile 
 ## OUTPUT
-
-
+![alt text](image-18.png)
 
 egrep '(world$)' newfile 
 ## OUTPUT
-
-
+![alt text](image-19.png)
 
 egrep '(World$)' newfile 
 ## OUTPUT
-
+![alt text](image-20.png)
 
 egrep '((W|w)orld$)' newfile 
 ## OUTPUT
-
-
+![alt text](image-21.png)
 
 egrep '[1-9]' newfile 
 ## OUTPUT
-
-
+![alt text](image-22.png)
 
 egrep 'Linux.*world' newfile 
 ## OUTPUT
-
+![alt text](image-23.png)
 
 egrep 'Linux.*World' newfile 
 ## OUTPUT
-
+![alt text](image-24.png)
 
 egrep l{2} newfile
 ## OUTPUT
-
-
+![alt text](image-25.png)
 
 egrep 's{1,2}' newfile
 ## OUTPUT 
-
+![alt text](image-26.png)
 
 cat > file23
 ```
@@ -231,11 +212,9 @@ cat > file23
 ^d
 ```
 
-
 sed -n -e '3p' file23
 ## OUTPUT
-
-
+![alt text](image-27.png)
 
 sed -n -e '$p' file23
 ## OUTPUT
