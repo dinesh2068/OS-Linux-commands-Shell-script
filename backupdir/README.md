@@ -347,44 +347,39 @@ cat urllist.txt | tr -d ' ' | tr -s '.'
 #Backup commands
 tar -cvf backup.tar *
 ## OUTPUT
-![alt text](image-49.png)
-![alt text](image-48.png)
+
 
 mkdir backupdir
  
 mv backup.tar backupdir
-cd backup.tar
+ 
 tar -tvf backup.tar
 ## OUTPUT
-![alt text](image-51.png)
-![alt text](image-50.png)
+
 
 tar -xvf backup.tar
 ## OUTPUT
-![alt text](image-52.png)
-![alt text](image-53.png)
+
 gzip backup.tar
 
-ls *.gz
+ls .gz
 ## OUTPUT
-![alt text](image-54.png)
-
+ 
 gunzip backup.tar.gz
-ls *.tar
 ## OUTPUT
-![alt text](image-55.png)
+
  
 # Shell Script
 ```
 echo '#!/bin/sh' > my-script.sh
-echo 'echo Hello World' my-script.sh
+echo 'echo Hello World‘; exit 0 >> my-script.sh
 ```
 chmod 755 my-script.sh
 ./my-script.sh
 ## OUTPUT
-![alt text](image-56.png)
+
  
-cat > herecheck.txt
+cat << stop > herecheck.txt
 ```
 hello in this world
 i cant stop
@@ -394,7 +389,7 @@ stop
 
 cat herecheck.txt
 ## OUTPUT
-![alt text](image-57.png)
+
 
 cat < scriptest.sh 
 ```bash
@@ -432,12 +427,10 @@ chmod 777 scriptest.sh
 ./scriptest.sh 1 2 3
 
 ## OUTPUT
-![alt text](image-58.png)
+
  
 ls file1
 ## OUTPUT
-![alt text](image-59.png)
-![alt text](image-60.png)
 
 echo $?
 ## OUTPUT 
@@ -446,8 +439,7 @@ bash: ./one: Permission denied
  
 echo $?
 ## OUTPUT 
-![alt text](image-61.png)
-
+ 
 abcd
  
 echo $?
